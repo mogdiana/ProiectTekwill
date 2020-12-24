@@ -1,0 +1,339 @@
+body {
+    min-width: 1000px;
+    margin: 0;
+    padding: 0; 
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    color: black;
+  }
+  .container {
+    width: 980px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  /*------Заголовок------*/
+  
+  .main-header-contacte {
+    padding-top: 45px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    /*background-color: #ef9f13;*/
+    background: linear-gradient(0deg, rgba(247,240,134,1) 0%, rgba(249,186,76,1) 100%);
+  }
+  
+  .header-top {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: 180px;
+  }
+  
+  
+  /*------Вертикальное меню------*/
+  .main-menu {
+    margin-left: 50px;
+    margin-top: 25px;
+  }
+  
+  .main-menu ul{
+    margin: 0px;
+    margin-left: 50px;
+    padding: 0;
+    list-style: none;
+  }
+  .main-menu li {
+    display: inline-block;
+    margin-right: 40px;
+    vertical-align: top;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .main-menu a{
+    color: black;
+    text-decoration: none;
+  }
+  .main-menu a:hover{
+    text-decoration: underline;
+  }
+  .main-menu a:active{
+   text-decoration: none;
+   opacity: 0.3;
+  }
+  
+  
+  /*------Путь к странице------*/
+  .page-title {
+    margin-top: 45px;
+    margin-left: 100px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .breadcrumbs {
+    margin-left: 100px;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+  
+  .breadcrumbs li {
+    position: relative;
+    display: inline-block;
+    margin-right: 50px;
+    color: #000000;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 24px;
+  }
+  
+  .breadcrumbs li::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -35px;
+    width: 19px;
+    height: 16px;
+    background-image: url("../img/ico-nav-arrow.png");
+    background-repeat: no-repeat;
+  }
+  
+  .breadcrumbs li:last-child::after {
+    content: none;
+  }
+  
+  .breadcrumbs a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+    color: blue;
+  }
+  
+  .breadcrumbs a:active {
+    text-decoration: underline;
+    opacity: 0.3;
+  }
+
+/*------Кнопка------*/
+.btn{
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #999999;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.btn-orange {
+  background: #f8a01c;
+}
+.btn-orange:hover{
+  background: #f5ad40;
+}
+.btn-orange:active{
+  background: #f5ad40;
+  color: #74c39e;
+}
+
+/*------Feedback------*/
+.feedback .container{
+  display: grid;
+  grid-template-columns: 500px 600px;
+  column-gap: 40px;
+  justify-content: start;
+}
+/*------Форма связи------*/
+.feedback .container {
+  display: grid;
+  grid-template-columns: 400px 560px;
+  grid-template-rows: 70px auto;
+  grid-template-areas: 
+  "title map"
+  "form map";
+  column-gap: 20px;
+  row-gap: 25px;
+}
+
+.contacts {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background-color: #efefef;
+  padding-left: 20px;
+  height: 400px;
+}
+
+.contacts-title{
+  grid-area: title;
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+/*------Поля формы------*/
+.contacts-form {
+  grid-area: form;
+}
+.contacts-form td{
+  padding-bottom: 10px;
+}
+.contacts-form .title{
+  width: 90px;
+  padding-right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+.contacts-form .field{
+  width: 300px;
+}
+.contacts-form input[type="text"],
+.contacts-form textarea{
+  width: 90%;
+  padding: 8px 20px; 
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #b2b2b2;
+  border-radius: 2px;
+}
+.contacts-form input[type="text"]:hover,
+.contacts-form textarea:hover{
+  border: 2px solid #7f7f7f;
+}
+
+/*------Map------*/
+.map{  
+  grid-area: map;
+}
+.map .buttons{
+  display: grid;
+  grid-template-columns: repeat(3,170px);
+  column-gap: 20px;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+  line-height: 24px;
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+}
+.buttons i {
+  background:orange;
+  padding: 15px;
+  border-radius: 100%;
+}
+/*------Footer------*/
+.main-footer {
+    padding-top: 45px;
+    padding-bottom: 25px;
+    background: #1f2022;
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .footer-top {
+    display: grid;
+    grid-template-columns: 300px 140px 140px 200px 140px;
+    column-gap: 20px;
+  }
+  
+  .footer-address {
+    margin-right: 40px;
+  }
+  .footer-address p{
+     margin: 0;
+     margin-top: 20px; 
+  }
+  /*-----Нижнее меню footer-----*/
+  .footer-menu {
+    margin-top: 0px;
+  }
+  
+  .footer-menu h4{
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .footer-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .footer-menu li{
+    margin-bottom: 14px;
+  }
+  
+  .footer-menu a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .footer-menu a:hover {
+    text-decoration: underline;
+  }
+  .footer-menu a:active {
+    text-decoration: underline;
+    opacity: 0.3;
+  }
+  /*-----Нижняя часть footer-----*/
+  .footer-bottom {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 300px 420px 200px;
+    column-gap: 30px;
+  }
+  
+  .copyright {
+    margin-right: 40px;
+  }
+  
+  .footer-social {
+    font-size: 0;  
+    text-align: right;
+  }
+  /*Социальные кнопки*/
+  .social-btn{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25px;
+  }
+  .social-btn-vk{
+    width: 36px;
+    height: 24px;
+    background-image: url("../img/ico-vk.png");
+    background-repeat: no-repeat;
+  }
+  .social-btn-fb{
+    width: 23px;
+    height: 35px;
+    background-image: url("../img/ico-fb.png");
+    background-repeat: no-repeat;
+  }
+  .social-btn-tw{
+    width: 36px;
+    height: 30px;
+    background-image: url("../img/ico-tw.png");
+    background-repeat: no-repeat;
+  }
+  
